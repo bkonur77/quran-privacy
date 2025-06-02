@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,  user-scalable=yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="robots" content="all">
+    <meta name="description" content="KUR’ÂN-I KERÎM, Islam Dini'nin Kutsal Kitabı...">
+    <meta name="keywords" content="kuran, ayet, ayetler, kuran-i kerim, ...">
+    <title>KUR’ÂN-I KERÎM</title>
+
+  
+    <style>
+/* Schriftarten einbinden */
+@font-face {
+    font-family: "KuranFont";
+    src: url("../fonts/shaik.ttf") format('truetype');
+}
+@font-face {
+    font-family: "comic";
+    src: url("../fonts/comic-sans.ttf") format('truetype');
+}
+@font-face {
+    font-family: "amiri";
+    src: url("../fonts/Amiri.ttf") format('truetype');
+}
+
+/* ========== CSS-Variablen für dein Farbschema ========== */
+:root {
+  --bs-primary:   #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-dark:      #212529;
+  --bs-light:     #f8f9fa;
+  --bs-accent:    #d9534f;
+}
+
+/* ========== Globales Reset & Basis ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ========== Utility-Klassen ========== */
+.mat-0  { margin-top:    0.23rem; }
+.mt-1  { margin-top:    0.25rem; }
+.mt-2  { margin-top:    0.5rem;  }
+.mt-3  { margin-top:    1rem;    }
+.mt-4  { margin-top:    1.5rem;  }
+.mab-0  { margin-bottom: 0.22rem; }
+.mb-1  { margin-bottom: 0.25rem; }
+.mb-2  { margin-bottom: 0.5rem;  }
+.mb-3  { margin-bottom: 1rem;    }
+.mb-4  { margin-bottom: 1.5rem;  }
+
+/* margin-left */
+.ml-1 { margin-left:  0.25rem !important; }
+.ml-2 { margin-left:  0.5rem  !important; }
+.ml-3 { margin-left:  1rem    !important; }
+.ml-4 { margin-left:  1.5rem  !important; }
+
+/* margin-right */
+.mr-1 { margin-right: 0.25rem !important; }
+.mr-2 { margin-right: 0.5rem  !important; }
+.mr-3 { margin-right: 1rem    !important; }
+.mr-4 { margin-right: 1.5rem  !important; }
+
+/* margin-left + margin-right */
+.mx-0 { margin-left:  0.15rem !important; margin-right: 0.15rem !important; }
+.mx-1 { margin-left:  0.25rem !important; margin-right: 0.25rem !important; }
+.mx-2 { margin-left:  0.5rem  !important; margin-right: 0.5rem  !important; }
+.mx-3 { margin-left:  1rem    !important; margin-right: 1rem    !important; }
+.mx-4 { margin-left:  1.5rem  !important; margin-right: 1.5rem  !important; }
+
+/* Padding – alle Richtungen */
+
+/* Padding rundum */
+.p-1 { padding: 0.25rem !important; }
+.p-2 { padding: 0.5rem  !important; }
+.p-3 { padding: 1rem    !important; }
+.p-4 { padding: 1.5rem  !important; }
+
+/* Padding vertikal (top & bottom) */
+.py-1 { padding-top:    0.25rem !important; padding-bottom: 0.25rem !important; }
+.py-2 { padding-top:    0.5rem  !important; padding-bottom: 0.5rem  !important; }
+.py-3 { padding-top:    1rem    !important; padding-bottom: 1rem    !important; }
+.py-4 { padding-top:    1.5rem  !important; padding-bottom: 1.5rem  !important; }
+
+/* Padding horizontal (left & right) */
+.px-1 { padding-left:   0.25rem !important; padding-right:  0.25rem !important; }
+.px-2 { padding-left:   0.5rem  !important; padding-right:  0.5rem  !important; }
+.px-2-5 { padding-left:   0.85rem  !important; padding-right:  0.85rem  !important; }
+.px-3 { padding-left:   1rem    !important; padding-right:  1rem    !important; }
+.px-4 { padding-left:   1.5rem  !important; padding-right:  1.5rem  !important; }
+
+/* Padding oben */
+.pt-1 { padding-top:    0.25rem !important; }
+.pt-2 { padding-top:    0.5rem  !important; }
+.pt-3 { padding-top:    1rem    !important; }
+.pt-4 { padding-top:    1.5rem  !important; }
+
+/* Padding unten */
+.pb-1 { padding-bottom: 0.25rem !important; }
+.pb-2 { padding-bottom: 0.5rem  !important; }
+.pb-3 { padding-bottom: 1rem    !important; }
+.pb-4 { padding-bottom: 1.5rem  !important; }
+
+/* Padding links */
+.pl-1 { padding-left:   0.25rem !important; }
+.pl-2 { padding-left:   0.5rem  !important; }
+.pl-3 { padding-left:   1rem    !important; }
+.pl-4 { padding-left:   1.5rem  !important; }
+
+/* Padding rechts */
+.pr-1 { padding-right:  0.25rem !important; }
+.pr-2 { padding-right:  0.5rem  !important; }
+.pr-3 { padding-right:  1rem    !important; }
+.pr-4 { padding-right:  1.5rem  !important; }
+
+/* Body-Hintergrund */
+body {
+    background: rgba(10, 10, 10, 0.99);
+    background-image: url("../images/hatsanat2.png");
+    background-repeat: repeat;
+}
+
+.header-container {
+          position: relative;
+          padding: 1rem 0;
+          background: rgba(10, 10, 10, 0.99);
+          text-align: center;
+        }
+        .custom-title {
+          margin: 0;
+          font-family: 'amiri', serif;
+          font-size: clamp(2rem, 6vw, 4rem);
+          color: #dca56c;
+          letter-spacing: clamp(0.1em, 1vw, 0.2em);
+          text-transform: uppercase;
+        }
+
+/* Rahmen und Glüheffekt um Titelbereich */
+#titleBorder {
+    border: 2px solid aliceblue;
+    box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
+}
+
+/* Header-Schriftart und Effekte */
+header {
+    font-family: "comic", sans-serif;
+    color: #d9534f;
+    text-shadow: 0 0 1em #d9534f, 0 0 5em white, 0 0 10em white;
+}
+
+header.p-1 {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+/* Horizontale Linie mit weniger Abstand */
+hr {
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+/* ========== Sticky Footer & Grund-Layout ========== */
+/* HTML und Body auf volle Höhe setzen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body als Flex-Container, damit Footer unten bleibt */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hauptbereich (alles zwischen Header und Footer) soll flexibel wachsen */
+main {
+  flex: 1; /* Nimmt verbleibenden Platz ein */
+  display: flex;
+  flex-direction: column;
+  width:auto;
+}
+
+/* Footer nicht fixieren, sondern ans Ende des Flex-Containers schieben */
+footer.bottom-nav,
+footer {
+    flex-shrink: 0;
+    background: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+    align-items: center;
+}
+
+/* active-Mode Highlight */
+.active-mode {
+  border: 3px solid var(--bs-accent) !important;
+  color: var(--bs-dark)      !important;  /* dunkler Text */
+
+}
+
+/* Scroll-to-Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    background-color: #d9534f;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    display: none; /* Start hidden */
+    transition: opacity 0.4s ease;
+    transition: bottom 0.6s ease-in-out;
+    opacity: 0.3;
+}
+#scrollToTopBtn:hover {
+    background-color: #c0392b;
+}
+
+/* Hauptanzeigebereich */
+.bgnew {
+    position: relative;
+    background: #f4f4f4 url("../images/KuranBG.png");
+    padding: 1rem;
+    text-align: center;
+}
+
+
+/* Bismillah-Block */
+.bismillah {
+    padding-bottom: 5px;
+}
+
+/* Navigationsleiste */
+.navbar {
+    text-align:center;
+    display:flex;
+}
+
+/* Flex-Utility */
+.flex,
+.nav-item {
+    display: inline-flex;
+}
+.img-fluid{
+    width: 100%;
+    max-width: 1200px;
+    min-width: 290px;
+    height: auto;
+    padding:1% 4%;
+  }
+.line{margin-top:2rem;}
+
+/* Button-Styling */
+.btn-outline-success {
+    color: #d9534f;
+    border-color: #d9534f;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:active,
+.btn-outline-success:focus,
+.btn-outline-success.active {
+    color: white;
+    background-color: #d9534f;
+    border-color: #d9534f;
+    outline: none;
+}
+
+
+/* Koran-Textblöcke */
+.left {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    padding-bottom: 0.5rem;
+    text-align: left;
+}
+
+.right {
+    font-size: 3.2rem;
+    font-family: "KuranFont";
+    line-height: 7rem;
+    letter-spacing: 0.4px;
+    word-spacing: 5px;
+}
+.translation{
+font-size:2rem;
+line-height:3rem;
+}
+
+
+/* 1) Mach aus Deinem #navAyet / #navSayfa Span einen Flex-Container */
+#navAyet, #navSayfa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem; /* Abstand zwischen Icon, Text und Icon */
+}
+
+/* 2) Einheitliche Schrift-/Icon-Größen und Line-Height */
+#navAyet .left_arrow,
+#navSayfa .left_arrow_1,
+#navAyet .right_arrow,
+#navSayfa .right_arrow_1 {
+
+  line-height: 1;
+}
+
+/* 3) Text ebenfalls mittig */
+#navAyet span.left_arrow,
+#navSayfa span.left_arrow_1 {
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+/* Pfeilnavigation */
+.arrow {
+    float: left;
+}
+
+.left_arrow,
+.right_arrow,
+.left_arrow_1,
+.right_arrow_1,
+#toggleSearchIcon{
+    color: whitesmoke;
+    font-size: 1.6rem;
+    padding: 0 2px;
+    cursor: pointer;
+}
+
+/* Hinweisbox "Gespeichert" */
+#saved {
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(54, 69, 79, 0.95); /* Anthrazit mit 95 % Deckkraft */
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  display: none;
+  z-index: 9999;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+/* 1) Basis-Style versteckt */
+#cookset input#searchInput.form-control {
+  display: none !important;        /* ausgeblendet per Default */
+  width: clamp(60px, 10vw, 160px) !important;
+  min-width: 60px;
+  max-width: 100%;/* gleiche Breite wie Cüz-Input */
+  padding: 0.15rem !important;
+  text-align: center !important;
+  border-radius: 4px !important;
+  opacity: 0;
+  transition: opacity 0.2s ease !important;
+}
+
+/* 2) Sobald .visible dazukommt, einblenden */
+#cookset input#searchInput.form-control.visible {
+  display: inline-block !important;
+  opacity: 1 !important;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translate(-50%, -60%); }
+  10%  { opacity: 1; transform: translate(-50%, -50%); }
+  90%  { opacity: 1; transform: translate(-50%, -50%); }
+  100% { opacity: 0; transform: translate(-50%, -40%); }
+}
+
+/* Steuer-Icons oben rechts */
+#osx,
+#addBookmark,
+#toggleThemeIcon,
+#toggleOrnaIcon,
+#toggleSetupIcon,
+#toggleBookmarksIcon {
+  color: whitesmoke;
+  font-size: 1.6rem;
+  padding-left: 0.3rem;
+  cursor: pointer;
+}
+
+/* Container für Bookmark-Symbole */
+#cookset {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;         /* Abstand zwischen den Elementen */
+  float: right;        /* wie gehabt */
+}
+
+/* override Bootstrap .form-control so dein Cüz-Input nicht 100% breit wird */
+#cookset .form-control {
+  display: inline-block !important;
+  width: auto !important;
+  min-width: 20px;
+  max-width: 30px;
+  padding: 0.05rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin-bottom:0.5rem;
+}
+
+
+/* Schließen-Symbol */
+#closeBookmarks:hover {
+  color: whitesmoke;
+}
+
+#closeBookmarks {
+  color: whitesmoke;
+  position: relative;            /* für absolutes Positionieren des Buttons */
+    display: flex;
+    align-items: center;           /* vertikal zentrieren */
+    justify-content: right;       /* Inhalt (Text) horizontal zentrieren */
+    padding: 0.4rem 1rem;          /* Höhe verkleinern */
+    max-width: 300px;              /* bei Bedarf Breite einschränken */
+    margin: 0.3rem auto;
+}
+
+/* 1) Den Bookmark-Eintrag als Flex-Container mittig ausrichten */
+#bookmarkList .list-group-item {
+  position: relative;            /* für absolutes Positionieren des Buttons */
+  display: flex;
+  align-items: center;           /* vertikal zentrieren */
+  justify-content: center;       /* Inhalt (Text) horizontal zentrieren */
+  padding: 0.5rem 1rem;          /* Höhe verkleinern */
+  max-width: 300px;              /* bei Bedarf Breite einschränken */
+  margin: 0.3rem auto;           /* Abstand und zentrieren im Parent */
+}
+
+
+/* Justified Text */
+#just {
+  text-align: justify;
+}
+
+
+/* Innenabstände */
+.p-0-5 {
+  padding: 0 0 1.5rem;
+}
+.p-0-6 {
+  padding-bottom: 2rem;
+}
+
+.nrbg3 {
+  display: inline;
+  vertical-align: middle;
+  padding: 0.7rem;
+  background-image: url(../images/vahid_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'amiri', serif;
+
+  /* Icon-Box etwas größer machen */
+  width: clamp(2.5em, 6vw, 4.5em);
+  height: clamp(2.5em, 6vw, 4.5em);
+
+  /* Zahlproportion zur Box */
+  font-size: clamp(0.5rem, 3vw, 2.5rem);
+  line-height: 1;
+  background-size: 85% auto;  /* Icon skaliert auf 80% der Box-Breite */
+  margin: 0 0.3rem;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.inline-symbol {
+  width: 1em;
+  height: auto;
+  vertical-align: middle;
+}
+
+/* Trennerlinie */
+.line {
+  border: 1px solid #d9534f;
+}
+
+/* Aktiver Zustand für Bootstrap Buttons */
+.btn-outline-success.active,
+.btn-outline-success.active:focus,
+.btn-outline-success.active:hover,
+.btn-outline-success.focus:active,
+.btn-outline-success:active:focus,
+.btn-outline-success:active:hover,
+.open > .btn-outline-success.dropdown-toggle.focus,
+.open > .btn-outline-success.dropdown-toggle:focus,
+.open > .btn-outline-success.dropdown-toggle:hover {
+  color: white;
+  background-color: #d9534f;
+  border-color: #d9534f;
+  outline-color: transparent;
+}
+
+
+/* Visuell abgerundete Box mit Leuchteffekt */
+.rounded {
+  padding: 1.3rem;
+  box-shadow: 0 0 1em white, 0 0 1em white, 0 0 1em white;
+}
+
+/* Arabischer Text rechtsbündig & Blocksatz */
+.arabic-text {
+  direction: rtl;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.loader-container {
+  text-align: center;
+}
+/* Preloader-Overlay */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 1);
+  background-image: url("../images/hatsanat2.png");
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 9999;
+}
+
+/* Ladebalken */
+.loading-bar {
+  width: 200px;
+  height: 8px;
+  background: #ccc;
+  margin: 3rem auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 0%;
+  height: 100%;
+  background: #d9534f;
+  animation: loading-fill 4s linear forwards;
+}
+
+@keyframes loading-fill {
+  from { width: 0%; }
+  to   { width: 100%; }
+}
+
+/* Ladebild */
+.preloader-img {
+  width: 85%;
+  height: auto;
+}
+
+.kuran-text {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 45px;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 20px;
+    }
+
+/* Surenname */
+.surename {
+  font-family: 'KuranFont', serif;
+  font-size: 2.5rem;
+  color: #d9534f;
+  text-align: center;
+  line-height: 2rem;
+}
+
+/* Bismillah-Text */
+.bismillah {
+  font-family: 'KuranFont', serif;
+  font-size: 2rem;
+  color: #d9534f;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Seitenzähler */
+.sayfa {
+  font-weight: bold;
+}
+
+/* Hervorhebungen im Text */
+.red-word{color: #d9534f;}
+.red-top-mark
+ {
+  color: #d9534f;
+  display: inline-block;
+  vertical-align: text-top;   /* ganz oben an der Zeile ausrichten */
+    /* feiner Feinschliff: */
+  position: relative;
+  top: -0.38em;
+}
+.red-top-mark{top: -0.10em;}
+.red-top-mark { transform: translateY(0.25em); }
+/*.red-top-meddeh { column-span: all; top: -0.3em; color: #d9534f !important;}*/
+.red-bottom-mark { transform: translateY(0em); }
+
+
+#cuez::placeholder {
+  color: #000;
+  opacity: 0.7;
+}
+
+
+
+/* Shake-Effekt bei falschem Swipe */
+@keyframes softShake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-1px); }
+  40% { transform: translateX(1px); }
+  60% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: softShake 0.1s ease;
+}
+
+/* Lesezeichenbereich */
+#bookmarkList {
+  transform-origin: top center;
+}
+
+/* Inhalt-Sektion mit Transition für Swipe */
+.bgnew {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    overflow-y: auto;     /* sorgt dafür, dass gescrollt wird */
+    touch-action: pan-y;   /* erlaubt vertikales Panning, sperrt horizontales & Pinch */
+}
+
+#cuzInput.form-control {
+  width: clamp(30px, 15vw, 45px) !important;
+  max-width: 45px;
+  text-align:center;
+  padding:0.2rem;
+}
+
+/* Vertikale Cüz-Anzeige */
+#vertical-cuez {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: #d9534f;
+  color: white;
+  padding: 2px 5px !important;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity:0.7;
+}
+
+#vertical-sure {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  background: #d9534f;
+  color: white;
+  padding: 2px 5px !important;
+  font-weight: bold;
+  font-size: clamp(0.9rem, 1.5vw, 1.5rem);
+  text-align: center;
+  border-radius: 5px;
+  z-index: 1000;
+  opacity:0.7;
+}
+
+
+.surah-title {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* KEIN extra linkes/rechtes padding –
+     sondern nur oben/unten für Abstand */
+  padding: 1.5em 0;
+  margin: 0.5em 0;
+
+  border: 2px solid #d9534f;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.8);
+
+  font-size: 1.25rem;
+  color: #d9534f;
+  font-family: 'KuranFont', serif;
+
+  /* Die beiden Halbbilder als Hintergründe: */
+  background-image:
+    url('../images/orna1_links.png'),
+    url('../images/orna1_rechts.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position:
+    left center,
+    right center;
+  background-size:
+    auto 100%,   /* volle Höhe, Breite automatisch */
+    auto 100%;
+}
+
+@media (max-width: 600px) {
+  #vertical-cuez {
+    font-size: 0.9rem;
+    padding: 6px 4px;
+  }
+  #vertical-sure {
+      font-size: 0.9rem;
+      padding: 6px 4px;
+    }
+}
+
+.nav-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 4px;
+}
+
+
+/* ========== Responsive Meta-Overrides ========== */
+/* Wenn du im <head> noch shrink-to-fit hattest, sorgt Bootstrap 5+ für proper scaling.
+   Hier nur ergänzend, falls nötig: */
+@media (max-width: 768px) {
+  /* Beispiel: Hero-Header-Padding o.ä. */
+  header {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (orientation: landscape) {
+  #controls {
+    gap: 1rem;               /* mehr Abstand in Quer */
+  }
+  #controls .form-select,
+  #controls .form-control {
+    min-width: 140px;        /* etwas breiter */
+  }
+  footer .nav-icon {
+    width: 36px;             /* evtl. Icons etwas kleiner */
+    height: auto;
+  }
+
+   .nrbg3 {
+        /* hier z.B. max‐Font‐Size auf 1.2rem begrenzen */
+         font-size: clamp(0.4rem, 2.0vw, 1rem);
+   }
+   .surename {
+       font-size: 3rem;
+     }
+
+}
+
+
+/* 1) Definiere die Puls-Animation */
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217,83,79, 0.7);
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 6px rgba(217,83,79, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217,83,79, 0.0);
+  }
+}
+
+/* 2) Wende sie auf dein Icon an */
+.highlight-icon {
+  display: inline-block;           /* falls es ein <img> ist */
+  animation: pulse-glow 2s ease-in-out infinite;
+  border-radius: 50%;              /* rund, falls gewünscht */
+  cursor: pointer;                 /* optional */
+}
+
+/* Optional: Hover-State noch stärker betonen */
+.highlight-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 15px 8px rgba(217,83,79, 0.6);
+}
+
+/* Wenn es ein <img> ist, stell‘s so sicher in der Zeile dar */
+.highlight-icon img {
+  width: 2.5em;
+  height: auto;
+  vertical-align: middle;
+}
+
+.cuez,
+  .sayfa
+  {
+      font-size: 1.2rem;
+      margin-bottom: -3rem;
+    }
+
+ /* Wrapper für alle Controls */
+ #controls {
+   display: flex;
+   justify-content: center;
+   gap: 0.5rem;
+   flex-wrap: nowrap;               /* kein Umbruch */
+   padding: 0rem 0;
+   max-width: 100%;
+   margin: 0 auto;
+   overflow-x: auto;                /* Falls sehr eng, scrollbar */
+ }
+
+ #controls > * {
+   flex: 1 1 auto;
+   text-align: center;
+   width: auto !important;
+   min-width: 90px !important;
+   max-width: 180px !important;
+   padding: 0.2rem 0.2rem !important;
+   white-space: nowrap;
+   font-size: clamp(0.95rem, 1.3vw, 1.5rem); /* Dynamisch skalierbar */
+ }
+
+ #ayetno.form-control,
+ #cuez.form-control {
+   padding: 0.05rem 0.1rem !important; /* sehr kleines vertikales & horizontales Padding */
+ }
+
+/* Footer-Icons als Grid zentrieren */
+#footer-nav {
+  display: flex;      /* automatisch nebeneinander */
+  justify-content: center;     /* zentrieren */
+  gap: 1.5rem;                   /* Abstand zwischen den Icons */
+  padding: 0.5rem 0;             /* vertikale Innenabstände */
+  background: whitesmoke;           /* optional: Hintergrund */
+  overflow-x: hidden;
+}
+#footer-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#footer-nav img.nav-icon {
+  width: 48px;
+  height: auto;
+  margin: 0 1rem;
+}
+
+@media (min-width: 290px) and (max-width: 768px) {
+.btn-group > .btn:first-child{
+	margin-bottom:3px;
+}
+	.bgnew{padding: 1rem 1rem;}
+}
+
+/* Smartphones (290px–512px) */
+@media (min-width: 290px) and (max-width: 512px) {
+  .btn-group > .btn:first-child {
+    margin-bottom: 3px;
+  }
+
+    #controls > * {
+       flex: 0 0 auto;
+       text-align: center;
+       width: auto !important;
+       min-width: 0 !important;
+       max-width: none !important;
+       padding: 0.1rem 0.2rem !important;
+       white-space: nowrap;
+       font-size: 0.85rem;
+     }
+  .bgnew {
+    padding: 1rem;
+  }
+  #cuzInput.form-control {
+    width: 35px !important;
+    padding:0.1rem;
+  }
+  #footer-nav img.nav-icon {
+    width: 36px;
+    gap: 1rem;
+    margin: 0;
+    }
+  .p-0-5 {
+    padding-bottom: 3.2rem;
+  }
+  .left {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .right {
+    font-size: 1.8rem;
+    line-height: 3.8rem;
+  }
+  .surename {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .line{margin-top:1rem;}
+  .kuran-text{font-size:30px;}
+  .cuez,
+  .sayfa
+  {
+      font-size: 0.7rem;
+       margin-bottom: -1rem;
+    }
+  #osx,
+  #addBookmark,
+  #toggleBookmarksIcon {
+    font-size: 1.3rem;
+  }
+
+  .red-top-mark{top: -0.27em;}
+
+  .left_arrow,
+  .right_arrow,
+  .left_arrow_1,
+  .right_arrow_1,
+   #toggleSearchIcon{
+    font-size: 1.2rem;
+  }
+  #cookset input#searchInput.form-control {
+    width: clamp(100px, 10vw, 120px) !important;
+  }
+  .klein{font-size: 1.1rem;}
+  .nrbg3 {
+
+           font-size: clamp(0.6rem, 2.0vw, 1.1rem);
+     }
+     .surah-title {
+        padding: 0.5rem 0;
+     }
+     .translation{
+     font-size:1.1rem;
+     line-height:1.7rem;
+     }
+}
+
+/* Kleine Tablets (513px–768px) */
+@media (min-width: 513px) and (max-width: 768px) {
+  .p-0-5 {
+    padding-bottom: 3.2rem;
+  }
+  .left {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .right {
+    font-size: 1.9rem;
+    line-height: 3.8rem;
+  }
+  .surename {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .nrbg3 {
+
+           font-size: clamp(0.4rem, 2.0vw, 1rem);
+     }
+
+}
+
+/* Tablets/Laptops (769px–1199px) */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .left {
+    font-size: 2.9rem;
+    line-height: 4.5rem;
+  }
+  .translation{
+  font-size: 1.5rem;
+      line-height: 2.5rem;
+  }
+  .right {
+    font-size: 2.7rem;
+    line-height: 5.5rem;
+  }
+  .surename {
+    font-size: 2.7rem;
+    line-height: 3rem;
+  }
+.red-top-mark{top: -0.30em;}
+
+  .bgnew {
+    padding: 1rem 1.5rem;
+  }
+  .nrbg3 {
+           font-size: clamp(0.4rem, 2.0vw, 1.3rem);
+     }
+   .cuez,
+     .sayfa
+     {
+         font-size: 1rem;
+          margin-bottom: -1rem;
+       }
+       .line{margin-top:1rem;}
+       .surah-title {
+               padding: 0.7rem 0;
+            }
+
+
+}
+
+
+
+/* Default: orna1 */
+/*body.unca-orna1 .surah-title {
+  background-image:
+    url('../images/orna1_links.png'),
+    url('../images/orna1_rechts.png');
+}*/
+
+/* Alternativ: orna2 */
+/*body.unca-orna2 .surah-title {
+  background-image:
+    url('../images/orna2_links.png'),
+    url('../images/orna2_rechts.png');
+}*/
+
+/* ==============================
+   Dark Theme Overrides
+   ============================== */
+body.dark-theme {
+  /* Seiten-Hintergrund */
+  background: rgba(30, 30, 30, 1) !important;
+  background-image: url("../images/hatsanat2.png") !important;
+      background-repeat: repeat;
+}
+
+html body.dark-theme .bgnew {
+  background: rgba(50, 50, 50, 0.99) !important;
+  background-image: none     !important;
+  color:white !important;
+}
+html body.dark-theme .nrbg3 {
+  background-image: url(../images/vahid_2.png);
+  }
+
+html body.dark-theme .surah-title {
+    background-image: url('../images/orna2_links.png'),
+                          url('../images/orna2_rechts.png');
+    }
+
+ html body.dark-theme #swipeIndicator, #zoomIndicator{
+          background: rgba(255,255,255,0.9) !important;
+          color: #000 !important;
+    }
+
+    html body.dark-theme #titleBorder{
+            border: 2px solid #d3d3d3;
+            box-shadow: 0 0 1em LightGrey, 0 0 1em LightGrey, 0 0 1em LightGrey;
+    }
+
+
+
+.theme-switcher {
+  position: relative;
+  display: inline-block;
+}
+
+#openThemeMenu {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.theme-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 10000;
+}
+
+.theme-menu .theme-button {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: transform 0.2s ease;
+}
+
+.theme-menu .theme-button:hover {
+  transform: scale(1.1);
+  border-color: #000;
+}
+
+
+/* 1. Ganzes Fenster abdunkeln */
+.tour-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 10000;
+  pointer-events: none;
+}
+
+/* 2. Ziel-Element hervorheben */
+.tour-highlight {
+  position: absolute;
+  border: 3px solid #f0c040;
+  border-radius: 4px;
+  box-shadow: 0 0 0 9999px rgba(0,0,0,0.7);
+  z-index: 10001;
+  pointer-events: none;
+}
+
+/* 3. Tooltip-Box */
+.tour-tooltip {
+  position: absolute;
+  width: clamp(240px, 80%, 400px);
+  background: #fff;
+  color: #333;
+  padding: clamp(0.6rem, 2vw, 1rem);
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10002;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.4;
+  text-align: center;
+}
+
+
+.tour-controls {
+  position: absolute;
+  /* unten: immer 1rem über der System-Nav/Notch */
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 1rem);
+    right: 10%;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10003;
+}
+
+/* Für ältere iOS-WebViews zusätzlich: */
+@supports (bottom: constant(safe-area-inset-bottom)) {
+  .tour-controls {
+    bottom: calc(constant(safe-area-inset-bottom) + 1rem);
+  }
+}
+.tour-controls button {
+  background: #f0c040;
+  border: none;
+  padding: clamp(0.4rem, 1.5vw, 0.8rem) clamp(0.6rem, 2vw, 1rem);
+ font-size: clamp(0.9rem, 2vw, 1rem);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+  /* ---------- Tour Modal ---------- */
+    .modal-overlay {
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none; align-items: center; justify-content: center;
+      z-index: 20000;
+    }
+    .modal-box {
+      background: #fff; padding: 1.5rem; border-radius: 8px;
+      max-width: 90%; width: 300px; text-align: center;
+    }
+    .modal-buttons {
+      margin-top: 1rem; display: flex; justify-content: space-around;
+    }
+    .modal-buttons button {
+      padding: 0.5rem 1rem; font-size: 1rem;
+      border: none; border-radius: 4px; cursor: pointer;
+    }
+
+/* ausgegraut im Free-Mode */
+.locked #cookset {
+  filter: grayscale(100%) opacity(0.6);
+}
+
+/* Der Cursor bleibt ein Pointer, damit man weiß, dass man klicken kann */
+.locked #cookset * {
+  cursor: pointer;
+}
+
+/* ausgegraut im Free-Mode */
+body.locked #cuzInput {
+  filter: grayscale(100%) opacity(0.6);
+  cursor: pointer; /* damit man sieht, dass Klicks abgefangen werden */
+}
+
+/* 2.2 Modal-Grundgerüst */
+.upgrade-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  display: none;           /* versteckt */
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.upgrade-modal.active {
+  display: flex;           /* sichtbar, wenn .active gesetzt */
+}
+/* halbtransparenter Hintergrund */
+/*.upgrade-modal__backdrop {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}*/
+/* Box in der Mitte */
+/*.upgrade-modal__content {
+  position: relative;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-align: center;
+  z-index: 1;
+}
+.upgrade-modal__content h2 {
+  margin-top: 0;
+}
+.upgrade-modal__content button {
+  margin: 0.5rem;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+}*/
+
+
+        /* Loader */
+         .loader-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; display: flex; justify-content: center; align-items: center; z-index: 10000; }
+         .spinner { border: 8px solid #f3f3f3; border-top: 8px solid #d9534f; border-radius: 50%; width: 60px; height: 60px; animation: spin 1s linear infinite; }
+         @keyframes spin { to { transform: rotate(360deg); } }
+
+         /* Header */
+         .header-container { position: relative; padding: 1rem 0; background: #000; text-align: center; }
+         .back-arrow { position: absolute; top: 50%; left: 1rem; transform: translateY(-50%); width: clamp(2.5rem, 8vw, 3.5rem); height: clamp(2.5rem, 8vw, 3.5rem); background: #000; border: solid clamp(0.1rem, 0.5vw, 0.2rem) #fff; display: flex; align-items: center; justify-content: center; }
+         .back-arrow i { color: #fff; font-size: clamp(1rem, 4vw, 1.5rem); }
+         .custom-title { margin: 0; font-family: 'amiri', serif; font-size: clamp(2rem, 6vw, 4rem); color: #dca56c; letter-spacing: clamp(0.1em, 1vw, 0.2em); text-transform: uppercase; }
+
+         /* BGNEW centered */
+         #zoomContainer {  display: flex; justify-content: center; align-items: center; }
+             .bgnew { background: #fff; padding: 2rem; max-width: 360px; width: 90%; margin: 0 auto; box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-radius: 10px; text-align: center; }
+
+         /* Links styling */
+         .links { list-style: none; padding: 0; margin: 1rem 0; display: flex; flex-direction: column; gap: 0.75rem; }
+         .links li { }
+         .links a {
+           position: relative;
+           display: block;
+           padding: 0.75rem 1rem;
+           font-weight: bold;
+           text-decoration: none;
+           color: #333;
+           background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+           border: 2px solid #dca56c;
+           border-radius: 8px;
+           transition: transform 0.2s, box-shadow 0.2s;
+         }
+         .links a:hover {
+           transform: translateY(-3px);
+           box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+         }
+
+         /* Scroll button */
+         #scrollToTopBtn { position: fixed; right: 1rem; bottom: 25px; background: #dca56c; border: none; padding: 0.6rem; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1); cursor: pointer; transition: background 0.2s; }
+         #scrollToTopBtn:hover { background: #b38b51; }
+
+         /* Responsive tweaks */
+         @media (max-width: 480px) {
+           .custom-title { font-size: 0.9rem; }
+           .bgnew h2 {font-size:1.3rem;}
+         }
+         main {
+           flex: 1;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 2rem;
+         }
+
+
+
+    </style>
+</head>
+<body>
+<div id="loader" class="loader-overlay"><div class="spinner"></div></div>
+
+<header class="header-container">
+    <a href="info.html" class="back-arrow"><i class="fa fa-arrow-left"></i></a>
+    <h1 id="page-title" class="custom-title"></h1>
+</header>
+
+<main class="mx-2 mt-1 mb-4">
+    <div class="row mx-2 mb-4">
+        <div id="zoomContainer">
+            <div class="bgnew rounded px-4">
+
+                <p id="intro"></p>
+                <h2 id="h-payment"></h2>
+                <p id="p-payment"></p>
+                <h2 id="h-nodata"></h2>
+                <p id="p-nodata"></p>
+                <h2 id="h-storage"></h2>
+                <p id="p-storage"></p>
+                <h2 id="h-contact"></h2>
+                <p id="p-contact"></p>
+
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="mt-4">
+    <div id="footer-nav">
+        <a href="#" onclick="window.location.href='dua.html';">
+            <img src="images/dua.png"      class="nav-icon" alt="Dua"></a>
+        <a href="#" onclick="window.location.href='index.html?skipPreloader=1'; return false;">
+            <img src="images/kk.png" class="nav-icon" alt="KUR’ÂN-I KERÎM">
+        </a>
+        <a href="#" onclick="window.location.href='hatimdua.html';">
+            <img src="images/hdua.png"      class="nav-icon" alt="Hatim Dua"></a>
+        <a href="#" onclick="window.location.href='secde.html';">
+            <img src="images/secdeAyet.png"  class="nav-icon" alt="Secde"></a>
+        <a href="#"       onclick="window.Android.loadSalevat()">
+            <img src="images/salevat.png" class="nav-icon" alt="Salevat">
+        </a>
+        <a href="#" onclick="window.location.href='esma.html';">
+            <img  src="images/esma.png"   class="nav-icon" alt="Esma"></a>
+    </div>
+</footer>
+
+<script>
+    // Loader fade
+    (function(){ const loader = document.getElementById('loader'), start = Date.now(), minTime = 800; window.addEventListener('load', () => { const elapsed = Date.now() - start, wait = Math.max(0, minTime - elapsed); setTimeout(() => { loader.style.transition = 'opacity 0.4s'; loader.style.opacity = 0; loader.addEventListener('transitionend', () => loader.remove()); }, wait); }); })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const texts = {
+            title: { de: 'Datenschutzerklärung', tr: 'Gizlilik Politikası', en: 'Privacy Policy' },
+            intro: {
+                de: 'Diese App „Kuran i Kerim“ verarbeitet keine persönlichen Daten außer jenen, die für die Abwicklung von In-App-Käufen über den von Google Play bereitgestellten Abrechnungsdienst erforderlich sind.',
+                tr: 'Bu “Kuran i Kerim” uygulaması, Google Play tarafından sağlanan ödeme hizmeti aracılığıyla yapılan uygulama içi satın alımlar için gerekli olanlar dışında kişisel veri işlemez.',
+                en: 'This “Kuran i Kerim” app does not process personal data except those required for in-app purchases via the Google Play billing service.'
+            },
+            hPayment: { de: 'Zahlungsabwicklung', tr: 'Ödeme İşlemleri', en: 'Payment Processing' },
+            pPayment: {
+                de: 'Zahlungsinformationen (z. B. Kreditkarten- oder Kontodaten) werden ausschließlich vom Zahlungsanbieter (Google Play Billing oder PayPal) erhoben und verarbeitet. Die App selbst greift nicht auf diese Daten zu, sondern leitet alle Zahlungen sicher weiter.',
+                tr: 'Ödeme bilgileri (ör. kredi kartı veya hesap bilgileri) yalnızca ödeme sağlayıcısı (Google Play Billing veya PayPal) tarafından toplanır ve işlenir. Uygulama bu verilere doğrudan erişmez, tüm ödemeleri güvenli bir şekilde iletir.',
+                en: 'Payment information (e.g., credit card or account details) is collected and processed solely by the payment provider (Google Play Billing or PayPal). The app does not directly access this data, but securely forwards all payments.'
+            },
+            hNoData: { de: 'Keine weitere Datenerhebung', tr: 'Başka Veri Toplanmaz', en: 'No Further Data Collection' },
+            pNoData: {
+                de: 'Abgesehen von den für In-App-Käufe oder freiwillige Spenden notwendigen Daten werden keine weiteren Nutzerinformationen gesammelt, gespeichert oder an Dritte weitergegeben.',
+                tr: 'Uygulama içi satın alımlar veya isteğe bağlı bağışlar için gerekli veriler dışında başka kullanıcı bilgisi toplanmaz, saklanmaz veya üçüncü taraflarla paylaşılmaz.',
+                en: 'No additional user information is collected, stored, or shared with third parties, except for data necessary for in-app purchases or voluntary donations.'
+            },
+            hStorage: { de: 'Speicherung', tr: 'Veri Saklama', en: 'Storage' },
+            pStorage: {
+                de: 'Es erfolgt keine Speicherung von personenbezogenen Daten auf deinem Gerät oder externen Servern durch die App.',
+                tr: 'Uygulama, kişisel verileri cihazınızda veya harici sunucularda saklamaz.',
+                en: 'The app does not store personal data on your device or external servers.'
+            },
+            hContact: { de: 'Kontakt', tr: 'İletişim', en: 'Contact' },
+            pContact: {
+                de: 'Bei Fragen zum Datenschutz oder zur Unterstützung per PayPal kannst du dich an den Entwickler wenden:\nE-Mail: <a href="mailto:buelentkonur77@gmail.com">buelentkonur77@gmail.com</a><br>PayPal: <a href="https://paypal.me/bkonur" target="_blank">paypal.me/bkonur</a>',
+                tr: 'Gizlilik veya PayPal desteği hakkında sorularınız için geliştirici ile iletişime geçebilirsiniz:\nE-posta: <a href="mailto:buelentkonur77@gmail.com">buelentkonur77@gmail.com</a><br>PayPal: <a href="https://paypal.me/bkonur" target="_blank">paypal.me/bkonur</a>',
+                en: 'For privacy questions or PayPal support, contact the developer:\nEmail: <a href="mailto:buelentkonur77@gmail.com">buelentkonur77@gmail.com</a><br>PayPal: <a href="https://paypal.me/bkonur" target="_blank">paypal.me/bkonur</a>'
+            }
+
+        };
+        const code = navigator.language.slice(0,2).toLowerCase();
+        const lang = ['tr','de'].includes(code) ? code : 'en';
+
+        // Set content
+        document.getElementById('page-title').textContent = texts.title[lang];
+        document.getElementById('intro').innerHTML = texts.intro[lang];
+        document.getElementById('h-payment').textContent = texts.hPayment[lang];
+        document.getElementById('p-payment').innerHTML = texts.pPayment[lang];
+        document.getElementById('h-nodata').textContent = texts.hNoData[lang];
+        document.getElementById('p-nodata').textContent = texts.pNoData[lang];
+        document.getElementById('h-storage').textContent = texts.hStorage[lang];
+        document.getElementById('p-storage').textContent = texts.pStorage[lang];
+        document.getElementById('h-contact').textContent = texts.hContact[lang];
+        document.getElementById('p-contact').innerHTML = texts.pContact[lang];
+
+    });
+</script>
+</body>
+</html>
