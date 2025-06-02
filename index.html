@@ -1335,25 +1335,6 @@ body.locked #cuzInput {
     </div>
 </main>
 
-<footer class="mt-4">
-    <div id="footer-nav">
-        <a href="#" onclick="window.location.href='dua.html';">
-            <img src="images/dua.png"      class="nav-icon" alt="Dua"></a>
-        <a href="#" onclick="window.location.href='index.html?skipPreloader=1'; return false;">
-            <img src="images/kk.png" class="nav-icon" alt="KUR’ÂN-I KERÎM">
-        </a>
-        <a href="#" onclick="window.location.href='hatimdua.html';">
-            <img src="images/hdua.png"      class="nav-icon" alt="Hatim Dua"></a>
-        <a href="#" onclick="window.location.href='secde.html';">
-            <img src="images/secdeAyet.png"  class="nav-icon" alt="Secde"></a>
-        <a href="#"       onclick="window.Android.loadSalevat()">
-            <img src="images/salevat.png" class="nav-icon" alt="Salevat">
-        </a>
-        <a href="#" onclick="window.location.href='esma.html';">
-            <img  src="images/esma.png"   class="nav-icon" alt="Esma"></a>
-    </div>
-</footer>
-
 <script>
     // Loader fade
     (function(){ const loader = document.getElementById('loader'), start = Date.now(), minTime = 800; window.addEventListener('load', () => { const elapsed = Date.now() - start, wait = Math.max(0, minTime - elapsed); setTimeout(() => { loader.style.transition = 'opacity 0.4s'; loader.style.opacity = 0; loader.addEventListener('transitionend', () => loader.remove()); }, wait); }); })();
@@ -1362,9 +1343,9 @@ body.locked #cuzInput {
         const texts = {
             title: { de: 'Datenschutzerklärung', tr: 'Gizlilik Politikası', en: 'Privacy Policy' },
             intro: {
-                de: 'Diese App „Kuran i Kerim“ verarbeitet keine persönlichen Daten außer jenen, die für die Abwicklung von In-App-Käufen über den von Google Play bereitgestellten Abrechnungsdienst erforderlich sind.',
-                tr: 'Bu “Kuran i Kerim” uygulaması, Google Play tarafından sağlanan ödeme hizmeti aracılığıyla yapılan uygulama içi satın alımlar için gerekli olanlar dışında kişisel veri işlemez.',
-                en: 'This “Kuran i Kerim” app does not process personal data except those required for in-app purchases via the Google Play billing service.'
+                de: 'Diese App „KUR’ÂN-I KERÎM“ verarbeitet keine persönlichen Daten außer jenen, die für die Abwicklung von In-App-Käufen über den von Google Play bereitgestellten Abrechnungsdienst erforderlich sind.',
+                tr: 'Bu “KUR’ÂN-I KERÎM” uygulaması, Google Play tarafından sağlanan ödeme hizmeti aracılığıyla yapılan uygulama içi satın alımlar için gerekli olanlar dışında kişisel veri işlemez.',
+                en: 'This “KUR’ÂN-I KERÎM” app does not process personal data except those required for in-app purchases via the Google Play billing service.'
             },
             hPayment: { de: 'Zahlungsabwicklung', tr: 'Ödeme İşlemleri', en: 'Payment Processing' },
             pPayment: {
